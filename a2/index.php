@@ -98,6 +98,7 @@
 
         <section>
             <h2>Now Showing</h2><br>
+            <div>
             <table class = nowShowingTables>
                 <tr>
                     <th>
@@ -175,6 +176,7 @@
                     Sun - 9pm (21:00)
                 </th>
             </table>
+            </div>
 
             <table class="synopsisTable">
                 <tr>
