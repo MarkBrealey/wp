@@ -1,25 +1,31 @@
 /* Insert your styles here */
 html{
     scroll-behavior: smooth;
+    background-color: #35519A;
 }
-
 h1{
-    color:#000000;
     font-weight: 700;
     font-size: 40px;
 }
-
 h2{
-    color: #000000;
     font-weight: 700;
 }
-
-h1, h2, h3{
+h4{
+    font-size:12pt;
+    margin:0px;
+    text-align: center;
+    vertical-align: center;
+}
+h1, h2, h3, h4{
+    color: #191308;
     font-family: Verdana;
 }
-
 section{
     min-height: 100vh;
+}
+
+header,nav,main,footer{
+    background-color: #39A9DB;
 }
 
 main, nav, header{
@@ -28,22 +34,57 @@ main, nav, header{
     margin: 0 auto;
     padding: 15px;
 }
-
 footer{
     max-width:960px;
     margin: 25px auto;
 }
 
+p{
+    font-family: Calibri;
+}
+
+/* ID Tags*/
+#nowShowingDiv{
+    display:flex;
+}
+
+#seatAndPricingDiv{
+    border: 2px solid black;
+}
+#seatContainer{
+     width:100%;
+}
+#seatCenterDiv{
+    margin: 20px 0px 0px 0px;
+    width:100%;
+    display:flex;
+}
+/*Custom Classes */
+
+.navLinks{
+    alignment: center;
+    color: #000000;
+    font-family: Verdana;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Seats and Pricing*/
+
 .pricingContainer{
+    display:flex;
+}
+.headingContainers{
+    width:100%;
     display:flex;
 }
 .pricingDiv{
     flex:1;
+    text-align: center;
+    position:relative;
 }
 
-#nowShowingDiv{
-    display:flex;
-}
+/* Now Showing */
 
 .moviePosterDiv{
     border: 2px solid black;
@@ -54,24 +95,22 @@ footer{
     margin: 10px;
 }
 
+/* SYNOPSIS SECTION*/
+
 .synopsisDiv{
     border: 2px solid black;
     padding: 20px;
     margin: 50px 10px;
 }
-
 .synopsisCenterDiv{
     display:flex;
 }
-
 .plotDiv{
     flex: 1;
 }
-
 .previewVideo{
     flex: 1;
 }
-
 .previewVideo iframe {
     position: relative;
     min-height:200px;
@@ -110,11 +149,5 @@ footer{
     font-size: 16px;
     height: 40px;
     border-radius: 8px;
-}
-
-.navLinks{
-    alignment: center;
-    color: #000000;
-    font-size: 24px;
 }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 2</title>
+    <title>Assignment 2 - s3738237</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
@@ -38,64 +38,76 @@
 
         <section id="seatsAndPricing">
             <h2>Seats and Pricing</h2>
-            <div class="pricingContainer">
-                <div class="pricingDiv">
-                    <h3>SEATS</h3>
-                    <p>
-                        Standard Adult<br>
-                        Standard Concession<br>
-                        Standard Child
-                    </p>
-                    <p>
-                        First Class Adult<br>
-                        First Class Concession<br>
-                        First Class Child
-                    </p>
+            <div id="seatAndPricingDiv">
+                <div class="headingContainers">
+                    <div class="pricingDiv">
+                        <h4>SEATS</h4>
+                    </div>
+                    <div class="pricingDiv">
+                        <h4>All day Monday, Wednesday<BR>AND 12pm Weekdays</h4>
+                    </div>
+                    <div class="pricingDiv">
+                        <h4>All Other Times<br></h4>
+                    </div>
                 </div>
-                <div class = "pricingDiv">
-                    <h3>All day Monday and Wednesday<BR>AND 12pm Weekdays</h3>
-                    <p>
-                        $14.00<br>
-                        $12.50<br>
-                        $11.00
-                    </p>
-                    <p>
-                        $24.00<br>
-                        $22.50<br>
-                        $21.00<br>
-                    </p>
-                </div>
-                <div class="pricingDiv">
-                    <h3>All Other Times</h3>
-                    <p>
-                        $19.80<br>
-                        $17.50<br>
-                        15.30
-                    </p>
-                    <p>
-                        $30.00<br>
-                        $37.00<br>
-                        $24.00
-                    </p>
+                <div class="pricingContainer">
+                    <div class="pricingDiv">
+                        <p>
+                            Standard Adult<br>
+                            Standard Concession<br>
+                            Standard Child
+                        </p>
+                        <p>
+                            First Class Adult<br>
+                            First Class Concession<br>
+                            First Class Child
+                        </p>
+                    </div>
+                    <div class = "pricingDiv">
+                        <p>
+                            $14.00<br>
+                            $12.50<br>
+                            $11.00
+                        </p>
+                        <p>
+                            $24.00<br>
+                            $22.50<br>
+                            $21.00<br>
+                        </p>
+                    </div>
+                    <div class="pricingDiv">
+                        <p>
+                            $19.80<br>
+                            $17.50<br>
+                            $15.30
+                        </p>
+                        <p>
+                            $30.00<br>
+                            $37.00<br>
+                            $24.00
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <table class="seatTables">
-                <tr>
-                    <th>
+            <div id="seatContainer">
+                <div id="seatCenterDiv">
+                    <div class="pricingDiv">
                         <img width =350px src="../../media/538.jpg">
-                    </th>
-                    <th>
+                    </div>
+                    <div class="pricingDiv">
                         <img width =350px src="../../media/Verona-twin.png">
-                    </th>
-                </tr>
-                <tr>
-                    <th>Lunardos new standard seating</th>
-                    <th>Lundaros new First Class Recliners</th>
-                </tr>
-            </table>
-
-
+                    </div>
+                </div>
+                <div id="seatCenterDiv">
+                    <div class="pricingDiv">
+                        <h4>Lunardos new Standard Seating</h4>
+                    </div>
+                    <div class="pricingDiv">
+                        <h4>Lunardos new First Class Recliners</h4>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id = "nowShowing">
