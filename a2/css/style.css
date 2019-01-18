@@ -1,5 +1,6 @@
 /* Insert your styles here */
 body{
+
 }
 
 h1{
@@ -14,9 +15,10 @@ h2{
     font-weight: 700;
 }
 
-.seatTables{
+main, nav, header{
     border: 1px solid black;
     width: 960px;
+    margin: 0 auto;
 }
 
 #nowShowingDiv{

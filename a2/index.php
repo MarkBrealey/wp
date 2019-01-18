@@ -12,7 +12,6 @@
   </head>
 
   <body>
-
     <header>
         <div><h1>Lunardo Cinemas</h1></div>
     </header>
