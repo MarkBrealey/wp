@@ -1,6 +1,6 @@
 /* Insert your styles here */
-body{
-
+html{
+    scroll-behavior: smooth;
 }
 
 h1{
@@ -16,6 +16,10 @@ h2{
 
 h1, h2, h3{
     font-family: Verdana;
+}
+
+section{
+    min-height: 100vh;
 }
 
 main, nav, header{
@@ -52,19 +56,15 @@ footer{
 }
 
 .synopsisCenterDiv{
-    display:inline-block;
-    width:100%;
+    display:flex;
 }
 
 .plotDiv{
-    width:40%;
-    float:left;
-    display:inline-block;
+    flex: 1;
 }
 
 .previewVideo{
-    width: 57%;
-    display:inline-block;
+    flex: 1;
 }
 
 .previewVideo iframe {
@@ -80,6 +80,27 @@ footer{
     padding-bottom: 15px;
 }
 
+#sessionsDiv{
+    width: 100%;
+    display:inline-block;
+}
+
+.bookingDiv{
+    overflow:hidden;
+}
+
+.bookingCenterDiv{
+    width:100%;
+    display:flex;
+}
+
+.ticketsDiv{
+    flex:1;
+}
+
+.custDetailsDiv{
+    flex:1;
+}
 .bookingButton{
     font-size: 16px;
     height: 40px;

@@ -35,6 +35,7 @@
 
 
         </section>
+
         <section id="seatsAndPricing">
             <h2>Seats and Pricing</h2>
                 <table class="seatTables">
@@ -149,11 +150,11 @@
                             </p>
                         </div>
                         <div class="previewVideo">
-                            <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0"></iframe>
+                            <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                         </div>
                     </div>
                 <h2>Make a Booking</h2>
-                    <div class="bookingDiv">
+                    <div class="sessionsDiv">
                         <button class="bookingButton">Day - Time</button>
                         <button class="bookingButton">Day - Time</button>
                         <button class="bookingButton">Day - Time</button>
@@ -175,11 +176,11 @@
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0"></iframe>
+                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
-                <div class="bookingDiv">
+                <div class="sessionsDiv">
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
@@ -201,11 +202,11 @@
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0"></iframe>
+                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
-                <div class="bookingDiv">
+                <div class="sessionsDiv">
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
@@ -227,11 +228,11 @@
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0"></iframe>
+                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
-                <div class="bookingDiv">
+                <div class="sessionsDiv">
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
                     <button class="bookingButton">Day - Time</button>
@@ -245,9 +246,115 @@
 
         <section id="bookings">
             <h2>Bookings</h2><br>
-            <div>
+            <div class="bookingDiv">
                 <h3>Movie Title - Day - Time</h3>
-
+                <div class = bookingCenterDiv>
+                    <div class="ticketsDiv">
+                        <div>
+                                Standard Tickets:
+                                <p>Adults:
+                                    <select name = seats[STA]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                                <p>Concession:
+                                    <select name = seats[STP]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                                <p>Children:
+                                    <select name = seats[STC]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                            </div>
+                        <div>
+                                First Class Tickets:
+                                <p>Adults:
+                                    <select name = seats[FCA]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                                <p>Concession:
+                                    <select name = seats[FCP]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                                <p>Children:
+                                    <select name = seats[FCC]>
+                                        <option value="blank"> </option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </p>
+                            </div>
+                    </div>
+                    <div class="custDetailsDiv">
+                        <p>Name <input name="cust[name]" type=text rows="1" cols="80"></input></p>
+                        <p>e-Mail <input name="cust[email]" type=email rows="1" cols="80"></input></p>
+                        <p>Mobile <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
+                        <p>Credit Card <input name="cust[card]" type=text rows="1" cols="80"></input></p>
+                        <p>Expiry <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
