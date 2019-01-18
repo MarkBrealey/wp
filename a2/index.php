@@ -23,7 +23,7 @@
         </div>
     </header>
 
-    <nav>
+    <nav id="navbar">
         <div class="navLinks">
             <a href="#aboutUs">ABOUT US</a> - <a href="#seatsAndPricing">SEATS & PRICING</a> - <a href="#nowShowing">NOW SHOWING</a> - <a href="#bookings">BOOKINGS</a>
         </div>
@@ -103,7 +103,7 @@
                         <img width =350px src="../../media/538.jpg">
                     </div>
                     <div class="pricingDiv">
-                        <img width =350px src="../../media/Verona-twin.png">
+                        <img width =350px src="../../media/Verona-Twin.png">
                     </div>
                 </div>
                 <div id="seatCenterDiv">
@@ -350,7 +350,7 @@
                                         </select>
                                     </p>
                                     <p>Children:
-                                        <select name = seats[FCC]>
+                                        <select cols="50" name = seats[FCC]>
                                             <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -365,6 +365,11 @@
                                         </select>
                                     </p>
                                 </div>
+                            <div class="ticketsSubDiv">
+                                <p>
+                                    Total: <input name="total" type=text rows="1" cols="50"></input>
+                                </p>
+                            </div>
                         </div>
                         <div class="custDetailsDiv">
                             <h4>Your Details</h4>
@@ -399,6 +404,19 @@
           <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
       </div>
     </footer>
+    <script>
+        window.onscroll = function {stickyMenu()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
+        function stickyMenu(){
+            if (window.pageYOffset >= sticky{
+                navbar.classList.add("navStick")
+            }
+            else{
+                navbar.classList.remove("navStick");
+            }
+        }
+    </script>
   </body>
 </html>
