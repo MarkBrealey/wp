@@ -18,13 +18,13 @@
     </header>
 
     <nav>
-      <div class="navLinks">
-          ABOUT US - SEATS & PRICING - NOW SHOWING - BOOKINGS
-      </div>
+        <div class="navLinks">
+            <a href="#aboutUs">ABOUT US</a> - <a href="#seatsAndPricing">SEATS & PRICING</a> - <a href="#nowShowing">NOW SHOWING</a> - <a href="#bookings">BOOKINGS</a>
+        </div>
     </nav>
 
     <main>
-        <section>
+        <section id="aboutUs">
             <h2>About Lunardo Cinemas</h2>
             <p>
                 Lunardo Cinemas makes its return this Summer with a fresh new look, sound, and feel.
@@ -36,7 +36,7 @@
 
 
         </section>
-        <section>
+        <section id="seatsAndPricing">
             <h2>Seats and Pricing</h2>
                 <table class="seatTables">
                 <tr>
@@ -96,7 +96,7 @@
 
         </section>
 
-        <section>
+        <section id = "nowShowing">
             <h2>Now Showing</h2><br>
             <div id="nowShowingDiv">
                 <div class="moviePosterDiv">
@@ -166,7 +166,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="bookings">
             <h2>Bookings</h2><br>
         </section>
     </main>
