@@ -38,6 +38,11 @@ main, nav, header{
 }
 
 .synopsisDiv{
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.synopsisCenterDiv{
     display:inline-block;
     width:100%;
     margin:0;
