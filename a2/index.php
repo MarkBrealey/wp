@@ -19,7 +19,7 @@
 
     <nav>
       <div class="navLinks">
-          LINK 1 - LINK 2 - LINK 3 - LINK 4
+          ABOUT US - SEATS & PRICING - NOW SHOWING - BOOKINGS
       </div>
     </nav>
 
@@ -98,112 +98,70 @@
 
         <section>
             <h2>Now Showing</h2><br>
-            <div>
-            <table class = nowShowingTables>
-                <tr>
-                    <th>
-                        <img width = 190px src = "../../media/538.jpg">
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        The Girl in the Spider's Web
-                    </th>
-                </tr>
-                    <th>
-                        Wed - 9pm (21:00)<br>
-                        Thurs - 9pm(21:00)<br>
-                        Friday - 9pm(21:00<br>
-                        Sat - 6pm(18:00)<br>
-                        Sun - 6pm(18:00)
-                    </th>
-            </table>
-            <table class = nowShowingTables>
-                <tr>
-                    <th>
-                        <img width = 190px src = "../../media/538.jpg">
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        A Star is Born
-                    </th>
-                </tr>
-                <th>
-                    Mon - 6pm(18:00)<br>
-                    Tue - 6pm(18:00)<br>
-                    Sat - 3pm(15:00)<br>
-                    Sun - 3pm(15:00)
-                </th>
-            </table>
-            <table class = nowShowingTables>
-                <tr>
-                    <th>
-                        <img width = 190px src = "../../media/538.jpg">
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Ralph Breaks the Internet
-                    </th>
-                </tr>
-                <th>
-                    Mon - 12pm (12:00)<br>
-                    Tue - 12pm (12:00)<br>
-                    Wed - 6pm (18:00)<br>
-                    Thu - 6pm (18:00)<br>
-                    Fri - 6pm (18:00)<br>
-                    Sat - 12pm (12:00)<br>
-                    Sun - 12pm (12:00)
-                </th>
-            </table>
-            <table class = nowShowingTables>
-                <tr>
-                    <th>
-                        <img width = 190px src = "../../media/538.jpg">
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Boy Erased
-                    </th>
-                </tr>
-                <th>
-                    Wed - 12pm (12:00)<br>
-                    Thu - 12pm (12:00)<br>
-                    Fri - 12pm (12:00)<br>
-                    Sat - 9pm (21:00)<br>
-                    Sun - 9pm (21:00)
-                </th>
-            </table>
+            <div id="nowShowingDiv">
+                <div class="moviePosterDiv">
+                    <img width = 80% src = "../../media/538.jpg">
+                    <p><h3>The Girl in the Spider's Web</h3></p>
+                    <p>Wed - 9pm (21:00)</p>
+                    <p>Thu - 9pm (21:00)</p>
+                    <p>Fri - 9pm (21:00)</p>
+                    <p>Sat - 6pm (18:00)</p>
+                    <p>Sun - 6pm (18:00)</p>
+                </div>
+                <div class="moviePosterDiv">
+                    <img width = 80% src = "../../media/538.jpg">
+                    <p><h3>A Star is Born</h3></p>
+                    <p>Mon - 6pm (18:00)</p>
+                    <p>Tue - 6pm (18:00)</p>
+                    <p>Sat - 3pm (15:00)</p>
+                    <p>Sun - 3pm (15:00)</p>
+                </div>
+                <div class="moviePosterDiv">
+                    <img width = 80% src = "../../media/538.jpg">
+                    <p><h3>Ralph Breaks the Internet</h3></p>
+                    <p>Mon - 12pm (12:00)</p>
+                    <p>Tue - 12pm (12:00)</p>
+                    <p>Wed - 6pm (18:00)</p>
+                    <p>Thu - 6pm (18:00)</p>
+                    <p>Fri - 6pm (18:00)</p>
+                    <p>Sat - 12pm (12:00)</p>
+                    <p>Sun - 12pm (12:00)</p>
+                </div>
+                <div class="moviePosterDiv">
+                    <img width = 80% src = "../../media/538.jpg">
+                    <p><h3>Boy Erased</h3></p>
+                    <p>Wed - 12pm (12:00)</p>
+                    <p>Thu - 12pm (12:00)</p>
+                    <p>Fri - 12pm (12:00)</p>
+                    <p>Sat - 9pm (21:00)</p>
+                    <p>Sun - 9pm (21:00)</p>
+                </div>
             </div>
 
-            <table class="synopsisTable">
-                <tr>
-                    <th class="synopsisColumn">
-                        <h2>Movie Title MA15+</h2>
-                    </th>
-                    <th>
-                        Row 1 Col 2
-                    </th>
-                </tr>
-                <tr>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>Plot Description</th>
-                </tr>
-                <tr>
-                    <th>
+            <div class="synopsisDiv">
+                <div><h2>Movie Title MA15+</h2></div>
+                <div class="plotHeading">
+                    <h3>Plot Description</h3>
+                    <p>
                         This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
                         This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
                         This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                    </th>
-                </tr>
-                <tr>
-
-                </tr>
-            </table>
+                    </p>
+                </div>
+                <div class="previewVideo">
+                    <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="bookingDiv">
+                    <h2>Make a Booking</h2>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Day - Time</button>
+                </div>
+            </div>
         </section>
 
         <section>

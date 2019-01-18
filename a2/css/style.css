@@ -16,28 +16,53 @@ h2{
     color: #000000;
     font-weight: 700;
 }
-/*    CSS CLASSES   */
 
 .seatTables{
     border: 1px solid black;
     width: 960px;
 }
-.nowShowingTables{
-    border: 1px solid black;
-    padding: 0px;
-    display: inline-block;
-    display: -moz-inline-block;
-    width:200px;
-    height: 400px;
-}
-.synopsisTable{
-    width:960px;
-    border:1px solid black;
-    text-align: left;
+
+#nowShowingDiv{
+    max-width: 960px;
+    text-align:center;
 }
 
-.synopsisColumn{
-    width: 50%;
+.moviePosterDiv{
+    border: 1px solid black;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+    margin: auto;
+}
+
+.synopsisDiv{
+    border: 2px solid black;
+    display:inline-block;
+    overflow:hidden;
+}
+
+.plotHeading{
+    width:40%;
+    float:left;
+}
+
+.previewVideo{
+    width:58%;
+    overflow:hidden;
+    display:block;
+    margin: 0px auto;
+}
+
+.bookingDiv{
+    width:100%;
+    overflow:hidden;
+}
+
+.bookingButton{
+    font-size: 16px;
+    height: 40px;
+    border-radius: 8px;
 }
 
 .navLinks{
