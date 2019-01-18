@@ -17,8 +17,9 @@ h2{
 
 main, nav, header{
     border: 1px solid black;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
+    padding: 15px;
 }
 
 #nowShowingDiv{
@@ -37,25 +38,34 @@ main, nav, header{
 }
 
 .synopsisDiv{
-    border: 2px solid black;
     display:inline-block;
-    overflow:hidden;
+    width:100%;
+    margin:0;
+    padding:0;
 }
 
-.plotHeading{
-    width:39%;
+.plotDiv{
+    width:40%;
     float:left;
     display:inline-block;
+    vertical-align: top;
 }
 
 .previewVideo{
-    width: 59%;
+    width: 57%;
     display:inline-block;
 }
 
+.previewVideo iframe {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .bookingDiv{
-    width:100%;
-    overflow:hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding-bottom: 15px;
 }
 
 .bookingButton{
