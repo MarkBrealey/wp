@@ -114,7 +114,7 @@
             <h2>Now Showing</h2><br>
             <div id="nowShowingDiv">
                 <div class="moviePosterDiv">
-                    <img width = 80% src = "../../media/538.jpg">
+                    <img width = 80% src = "../../media/spider.jpg">
                     <p><h3>The Girl in the Spider's Web</h3></p>
                     <p>Wed - 9pm (21:00)</p>
                     <p>Thu - 9pm (21:00)</p>
@@ -123,7 +123,7 @@
                     <p>Sun - 6pm (18:00)</p>
                 </div>
                 <div class="moviePosterDiv">
-                    <img width = 80% src = "../../media/538.jpg">
+                    <img width = 80% src = "../../media/starborn.jpg">
                     <p><h3>A Star is Born</h3></p>
                     <p>Mon - 6pm (18:00)</p>
                     <p>Tue - 6pm (18:00)</p>
@@ -131,7 +131,7 @@
                     <p>Sun - 3pm (15:00)</p>
                 </div>
                 <div class="moviePosterDiv">
-                    <img width = 80% src = "../../media/538.jpg">
+                    <img width = 80% src = "../../media/wreckitralph.jpg">
                     <p><h3>Ralph Breaks the Internet</h3></p>
                     <p>Mon - 12pm (12:00)</p>
                     <p>Tue - 12pm (12:00)</p>
@@ -142,7 +142,7 @@
                     <p>Sun - 12pm (12:00)</p>
                 </div>
                 <div class="moviePosterDiv">
-                    <img width = 80% src = "../../media/538.jpg">
+                    <img width = 80% src = "../../media/boyerased.jpg">
                     <p><h3>Boy Erased</h3></p>
                     <p>Wed - 12pm (12:00)</p>
                     <p>Thu - 12pm (12:00)</p>
@@ -169,13 +169,11 @@
                     </div>
                 <h2>Make a Booking</h2>
                     <div class="sessionsDiv">
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
-                        <button class="bookingButton">Day - Time</button>
+                        <button class="bookingButton">Wed - 9pm (21:00)</button>
+                        <button class="bookingButton">Thu - 9pm (21:00)</button>
+                        <button class="bookingButton">Fri - 9pm (21:00)</button>
+                        <button class="bookingButton">Sat - 6pm (18:00)</button>
+                        <button class="bookingButton">Sun - 6pm (18:00</button>
                     </div>
             </div>
             <div class = synopsisDiv>
@@ -195,13 +193,10 @@
                 </div>
                 <h2>Make a Booking</h2>
                 <div class="sessionsDiv">
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Mon - 6pm (18:00)</button>
+                    <button class="bookingButton">Tue - 6pm (18:00)</button>
+                    <button class="bookingButton">Sat - 3pm (15:00)</button>
+                    <button class="bookingButton">Sun - 3pm (15:00)</button>
                 </div>
             </div>
             <div class = synopsisDiv>
@@ -219,13 +214,13 @@
                 </div>
                 <h2>Make a Booking</h2>
                 <div class="sessionsDiv">
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Mon - 12pm (12:00)</button>
+                    <button class="bookingButton">Tue - 12pm (12:00)</button>
+                    <button class="bookingButton">Wed - 6pm (18:00)</button>
+                    <button class="bookingButton">Thu - 6pm (18:00)</button>
+                    <button class="bookingButton">Fri - 6pm (18:00)</button>
+                    <button class="bookingButton">Sat - 12pm (12:00)</button>
+                    <button class="bookingButton">Sun - 12pm (12:00)</button>
                 </div>
             </div>
             <div class = synopsisDiv>
@@ -243,13 +238,11 @@
                 </div>
                 <h2>Make a Booking</h2>
                 <div class="sessionsDiv">
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
-                    <button class="bookingButton">Day - Time</button>
+                    <button class="bookingButton">Wed - 12pm (12:00)</button>
+                    <button class="bookingButton">Thu - 12pm (12:00)</button>
+                    <button class="bookingButton">Fri - 12pm (12:00)</button>
+                    <button class="bookingButton">Sat - 9pm (21:00)</button>
+                    <button class="bookingButton">Sun - 9pm (21:00)</button>
                 </div>
             </div>
         </section>

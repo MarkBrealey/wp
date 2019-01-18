@@ -3,6 +3,7 @@ html{
     scroll-behavior: smooth;
     background-color: #35519A;
 }
+
 h1{
     font-weight: 700;
     font-size: 40px;
@@ -20,23 +21,34 @@ h1, h2, h3, h4{
     color: #191308;
     font-family: Verdana;
 }
+
 section{
     min-height: 100vh;
+    max-width: 960px;
+    border:2px solid black;
+    margin: 20px 0px;
+    padding:20px;
 }
 
-header,nav,main,footer{
+header,nav,section,footer{
     background-color: #39A9DB;
 }
 
-main, nav, header{
-    border: 0px solid black;
-    max-width: 960px;
-    margin: 0 auto;
+header, nav{
+    border: 2px solid black;
     padding: 15px;
+    margin: 20px 0px;
+}
+
+main, nav, header{
+    max-width: 960px;
+    margin: 20px auto;
 }
 footer{
-    max-width:960px;
-    margin: 25px auto;
+    border: 2px solid black;
+    margin: 0px auto;
+    padding: 5px;
+    max-width: 960px;
 }
 
 p{
@@ -125,6 +137,7 @@ p{
 }
 
 .sessionsDiv{
+    alignment: center;
     width: 100%;
     display:inline-block;
 }
@@ -149,5 +162,6 @@ p{
     font-size: 16px;
     height: 40px;
     border-radius: 8px;
+    margin: 2px;
 }
 
