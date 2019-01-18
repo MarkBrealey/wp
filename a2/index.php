@@ -38,45 +38,47 @@
 
         <section id="seatsAndPricing">
             <h2>Seats and Pricing</h2>
-                <table class="seatTables">
-                <tr>
-                    <th>SEATS</th>
-                    <th>All day Monday and Wednesday<BR>AND 12pm Weekdays</th>
-                    <th>All other times</th>
-                </tr>
-                <tr>
-                    <th> Standard Adult</th>
-                    <th> $14.00</th>
-                    <th> $19.80</th>
-                </tr>
-                <tr>
-                    <th> Standard Concession</th>
-                    <th> $12.50</th>
-                    <th> $17.50</th>
-                </tr>
-                <tr>
-                    <th>Standard Child</th>
-                    <th>$11.00</th>
-                    <th>$15.30</th>
-                </tr>
-                <tr>
-                    <th>First Class Adult</th>
-                    <th>$24.00</th>
-                    <th>$30.00</th>
-                </tr>
-                <tr>
-                    <th>First Class Concession</th>
-                    <th>$22.50</th>
-                    <th>$27.00</th>
-                </tr>
-                <tr>
-                    <th>First Class Child</th>
-                    <th>$21.00</th>
-                    <th>$24.00</th>
-                </tr>
-            </table>
-
-            <p></p>
+            <div class="pricingContainer">
+                <div class="pricingDiv">
+                    <h3>SEATS</h3>
+                    <p>
+                        Standard Adult<br>
+                        Standard Concession<br>
+                        Standard Child
+                    </p>
+                    <p>
+                        First Class Adult<br>
+                        First Class Concession<br>
+                        First Class Child
+                    </p>
+                </div>
+                <div class = "pricingDiv">
+                    <h3>All day Monday and Wednesday<BR>AND 12pm Weekdays</h3>
+                    <p>
+                        $14.00<br>
+                        $12.50<br>
+                        $11.00
+                    </p>
+                    <p>
+                        $24.00<br>
+                        $22.50<br>
+                        $21.00<br>
+                    </p>
+                </div>
+                <div class="pricingDiv">
+                    <h3>All Other Times</h3>
+                    <p>
+                        $19.80<br>
+                        $17.50<br>
+                        15.30
+                    </p>
+                    <p>
+                        $30.00<br>
+                        $37.00<br>
+                        $24.00
+                    </p>
+                </div>
+            </div>
 
             <table class="seatTables">
                 <tr>
@@ -144,13 +146,13 @@
                         <div class="plotDiv">
                             <h3>Plot Description</h3>
                             <p>
-                                This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                                This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                                This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                                Claire Foy is the #GirlintheSpidersWeb.<br>
+                                Watch the trailer for the next chapter of the Dragon Tattoo series now.<br>
+                                In theaters November 9th.
                             </p>
                         </div>
                         <div class="previewVideo">
-                            <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
+                            <iframe src="https://www.youtube.com/embed/XKMSP9OKspQ" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                         </div>
                     </div>
                 <h2>Make a Booking</h2>
@@ -170,13 +172,13 @@
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
                         <p>
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                            Seasoned musician Jackson Maine (Bradley Cooper) discovers-and falls in love with-struggling artist Ally (Gaga).<br>
+                            She has just about given up on her dream to make it big as a singer - until Jack coaxes her into the spotlight.<br>
+                            But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
+                        <iframe src="https://www.youtube.com/embed/nSbzyEJ8X9E" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
@@ -196,13 +198,11 @@
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
                         <p>
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                            Six years after the events of "Wreck-It Ralph," Ralph and Vanellope, now friends, discover a wi-fi router in their arcade, leading them into a new adventure.
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
+                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style=""></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
@@ -222,13 +222,11 @@
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
                         <p>
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                            The son of a Baptist preacher is forced to participate in a church-supported gay conversion program after being forcibly outed to his parents.
                         </p>
                     </div>
                     <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
+                        <iframe src="https://www.youtube.com/embed/-B71eyB_Onw" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
                     </div>
                 </div>
                 <h2>Make a Booking</h2>
@@ -246,116 +244,119 @@
 
         <section id="bookings">
             <h2>Bookings</h2><br>
-            <div class="bookingDiv">
-                <h3>Movie Title - Day - Time</h3>
-                <div class = bookingCenterDiv>
-                    <div class="ticketsDiv">
-                        <div>
-                                Standard Tickets:
-                                <p>Adults:
-                                    <select name = seats[STA]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                                <p>Concession:
-                                    <select name = seats[STP]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                                <p>Children:
-                                    <select name = seats[STC]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                            </div>
-                        <div>
-                                First Class Tickets:
-                                <p>Adults:
-                                    <select name = seats[FCA]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                                <p>Concession:
-                                    <select name = seats[FCP]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                                <p>Children:
-                                    <select name = seats[FCC]>
-                                        <option value="blank"> </option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                    </select>
-                                </p>
-                            </div>
+            <form method="post" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " onsubmit="return formValidate();">
+              <div class="bookingDiv">
+                    <h3>Movie Title - Day - Time</h3>
+                    <div class = bookingCenterDiv>
+                        <div class="ticketsDiv">
+                            <div>
+                                    Standard Tickets:
+                                    <p>Adults:
+                                        <select name = seats[STA]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                    <p>Concession:
+                                        <select name = seats[STP]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                    <p>Children:
+                                        <select name = seats[STC]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                </div>
+                            <div>
+                                    First Class Tickets:
+                                    <p>Adults:
+                                        <select name = seats[FCA]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                    <p>Concession:
+                                        <select name = seats[FCP]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                    <p>Children:
+                                        <select name = seats[FCC]>
+                                            <option value="blank"> </option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </p>
+                                </div>
+                        </div>
+                        <div class="custDetailsDiv">
+                            <p>Name <input name="cust[name]" type=text rows="1" cols="80"></input></p>
+                            <p>e-Mail <input name="cust[email]" type=email rows="1" cols="80"></input></p>
+                            <p>Mobile <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
+                            <p>Credit Card <input name="cust[card]" type=text rows="1" cols="80"></input></p>
+                            <p>Expiry <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
+                        </div>
                     </div>
-                    <div class="custDetailsDiv">
-                        <p>Name <input name="cust[name]" type=text rows="1" cols="80"></input></p>
-                        <p>e-Mail <input name="cust[email]" type=email rows="1" cols="80"></input></p>
-                        <p>Mobile <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
-                        <p>Credit Card <input name="cust[card]" type=text rows="1" cols="80"></input></p>
-                        <p>Expiry <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
-                    </div>
+                  <button>Submit</button>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
 

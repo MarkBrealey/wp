@@ -23,7 +23,7 @@ section{
 }
 
 main, nav, header{
-    border: 1px solid black;
+    border: 0px solid black;
     max-width: 960px;
     margin: 0 auto;
     padding: 15px;
@@ -34,19 +34,24 @@ footer{
     margin: 25px auto;
 }
 
+.pricingContainer{
+    display:flex;
+}
+.pricingDiv{
+    flex:1;
+}
+
 #nowShowingDiv{
-    text-align:center;
-    display:table-cell;
+    display:flex;
 }
 
 .moviePosterDiv{
-    border: 1px solid black;
-    vertical-align: top;
-    display: inline-block;
+    border: 2px solid black;
+    flex: 1;
     text-align: center;
     width: 24%;
     min-width: 200px;
-    margin: auto;
+    margin: 10px;
 }
 
 .synopsisDiv{
@@ -68,19 +73,19 @@ footer{
 }
 
 .previewVideo iframe {
-    display:block;
-    margin-right: auto;
-    margin-left: auto;
+    position: relative;
+    min-height:200px;
+    height: 100%;
+    width: 100%;
 }
 
 .bookingDiv{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-bottom: 15px;
 }
 
-#sessionsDiv{
+.sessionsDiv{
     width: 100%;
     display:inline-block;
 }
