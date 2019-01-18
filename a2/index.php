@@ -13,7 +13,14 @@
 
   <body>
     <header>
-        <div><h1>Lunardo Cinemas</h1></div>
+        <div id="logoContainer">
+            <div id=logoIcon>
+                <img height="150" src="../../media/CinemaLogo.png">
+            </div>
+            <div id="logoTitle">
+                <h1>Lunardo Cinemas</h1>
+            </div>
+        </div>
     </header>
 
     <nav>
@@ -251,14 +258,18 @@
             <h2>Bookings</h2><br>
             <form method="post" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " onsubmit="return formValidate();">
               <div class="bookingDiv">
-                    <h3>Movie Title - Day - Time</h3>
+                  <div id="bookingsTitle">
+                      <h3>Movie Title</h3>
+                      <h3>Day - Time</h3>
+                  </div>
+
                     <div class = bookingCenterDiv>
                         <div class="ticketsDiv">
-                            <div>
-                                    Standard Tickets:
+                            <div class="ticketsSubDiv">
+                                <h4>Standard Tickets</h4>
                                     <p>Adults:
                                         <select name = seats[STA]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -273,7 +284,7 @@
                                     </p>
                                     <p>Concession:
                                         <select name = seats[STP]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -288,7 +299,7 @@
                                     </p>
                                     <p>Children:
                                         <select name = seats[STC]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -302,11 +313,11 @@
                                         </select>
                                     </p>
                                 </div>
-                            <div>
-                                    First Class Tickets:
+                            <div class="ticketsSubDiv">
+                                <h4>First Class Tickets</h4>
                                     <p>Adults:
                                         <select name = seats[FCA]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -321,7 +332,7 @@
                                     </p>
                                     <p>Concession:
                                         <select name = seats[FCP]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -336,7 +347,7 @@
                                     </p>
                                     <p>Children:
                                         <select name = seats[FCC]>
-                                            <option value="blank"> </option>
+                                            <option value="">Please Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -352,14 +363,17 @@
                                 </div>
                         </div>
                         <div class="custDetailsDiv">
-                            <p>Name <input name="cust[name]" type=text rows="1" cols="80"></input></p>
-                            <p>e-Mail <input name="cust[email]" type=email rows="1" cols="80"></input></p>
-                            <p>Mobile <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
-                            <p>Credit Card <input name="cust[card]" type=text rows="1" cols="80"></input></p>
-                            <p>Expiry <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
+                            <h4>Your Details</h4>
+                            <p>Name: <input name="cust[name]" type=text rows="1" cols="80"></input></p>
+                            <p>e-Mail: <input name="cust[email]" type=email rows="1" cols="80"></input></p>
+                            <p>Mobile: <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
+                            <p>Credit Card: <input name="cust[card]" type=text rows="1" cols="80"></input></p>
+                            <p>Expiry: <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
+                            <p>
+                                <button id="submitButton">Submit</button>
+                            </p>
                         </div>
                     </div>
-                  <button>Submit</button>
                 </div>
             </form>
         </section>

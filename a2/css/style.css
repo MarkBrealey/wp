@@ -44,6 +44,7 @@ main, nav, header{
     max-width: 960px;
     margin: 20px auto;
 }
+
 footer{
     border: 2px solid black;
     margin: 0px auto;
@@ -56,6 +57,17 @@ p{
 }
 
 /* ID Tags*/
+#logoIcon{
+    padding: 0px;
+    width:20%;
+}
+#logoContainer{
+    display:flex;
+}
+#logoTitle{
+    width:78%;
+    flex:1;
+}
 #nowShowingDiv{
     display:flex;
 }
@@ -70,6 +82,17 @@ p{
     margin: 20px 0px 0px 0px;
     width:100%;
     display:flex;
+}
+#submitButton{
+    font-size: 16px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 2px;
+}
+
+#bookingsTitle{
+    padding: 10px 10px;
+    width: 40%;
 }
 /*Custom Classes */
 
@@ -133,7 +156,7 @@ p{
 .bookingDiv{
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 15px;
+    padding: 10px 10px;
 }
 
 .sessionsDiv{
@@ -144,9 +167,11 @@ p{
 
 .bookingDiv{
     overflow:hidden;
+    border: 2px solid black;
 }
 
 .bookingCenterDiv{
+    border: 2px solid black;
     width:100%;
     display:flex;
 }
@@ -155,8 +180,15 @@ p{
     flex:1;
 }
 
+.ticketsSubDiv{
+    margin: 15px auto;
+    text-align: right;
+}
+
 .custDetailsDiv{
     flex:1;
+    padding-top: 30px;
+    text-align: right;
 }
 .bookingButton{
     font-size: 16px;
