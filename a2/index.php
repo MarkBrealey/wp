@@ -140,16 +140,18 @@
 
             <div class="synopsisDiv">
                 <div><h2>Movie Title MA15+</h2></div>
-                <div class="plotHeading">
-                    <h3>Plot Description</h3>
-                    <p>
-                        This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                        This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                        This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
-                    </p>
-                </div>
-                <div class="previewVideo">
-                    <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
+                    <div class="plotHeading">
+                        <h3>Plot Description</h3>
+                        <p>
+                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                            This is filler text to test spacing for the plot description. This is filler text to test spacing for the plot description.
+                        </p>
+                    </div>
+                    <div class="previewVideo">
+                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="bookingDiv">
                     <h2>Make a Booking</h2>

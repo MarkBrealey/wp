@@ -1,7 +1,5 @@
 /* Insert your styles here */
 body{
-    width: 960px;
-    margin: auto;
     background-color: darkred;
 }
 
@@ -23,8 +21,8 @@ h2{
 }
 
 #nowShowingDiv{
-    max-width: 960px;
     text-align:center;
+    display:table-cell;
 }
 
 .moviePosterDiv{
@@ -33,6 +31,7 @@ h2{
     display: inline-block;
     text-align: center;
     width: 24%;
+    min-width: 200px;
     margin: auto;
 }
 
@@ -43,15 +42,14 @@ h2{
 }
 
 .plotHeading{
-    width:40%;
+    width:39%;
     float:left;
+    display:inline-block;
 }
 
 .previewVideo{
-    width:58%;
-    overflow:hidden;
-    display:block;
-    margin: 0px auto;
+    width: 59%;
+    display:inline-block;
 }
 
 .bookingDiv{
