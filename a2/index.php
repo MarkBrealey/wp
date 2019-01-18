@@ -24,8 +24,8 @@
     </header>
 
     <nav>
-        <div id = "navbar" class="navLinks">
-            <a href="#aboutUs">ABOUT US</a> - <a href="#seatsAndPricing">SEATS & PRICING</a> - <a href="#nowShowing">NOW SHOWING</a> - <a href="#bookings">BOOKINGS</a>
+        <div id = "navBar" class="navLinks">
+            | <a href="#aboutUs">ABOUT US</a> | <a href="#seatsAndPricing">SEATS & PRICING</a> | <a href="#nowShowing">NOW SHOWING</a> | <a href="#bookings">BOOKINGS</a> |
         </div>
     </nav>
 
@@ -160,7 +160,7 @@
             </div>
 
             <div class = synopsisDiv>
-                <h2>The Girl in the Spider's Web MA15+</h2>
+                <h2>The Girl in the Spider's Web (MA15+)</h2>
                     <div class = synopsisCenterDiv>
                         <div class="plotDiv">
                             <h3>Plot Description</h3>
@@ -197,8 +197,7 @@
                       <h3>Movie Title</h3>
                       <h3>Day - Time</h3>
                   </div>
-
-                    <div class = bookingCenterDiv>
+                  <div class = bookingCenterDiv>
                         <div class="ticketsDiv">
                             <div class="ticketsSubDiv">
                                 <h4>Standard Tickets</h4>
@@ -310,7 +309,7 @@
                             <p>Credit Card: <input name="cust[card]" type=text rows="1" cols="80"></input></p>
                             <p>Expiry: <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
                             <p>
-                                <button id="orderButton">ORDER</button>
+                                <button class="bookingButton" id="orderButton">ORDER</button>
                             </p>
                         </div>
                     </div>
@@ -318,20 +317,6 @@
             </form>
         </section>
     </main>
-    <script>
-        window.onscroll = function {stickyMenu()};
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function stickyMenu(){
-            if (window.pageYOffset >= sticky{
-                navbar.classList.add("navStick")
-            }
-            else{
-                navbar.classList.remove("navStick");
-            }
-        }
-    </script>
     <footer>
       <div class="footerContainer">
           <div><p>
@@ -354,16 +339,16 @@
       </div>
     </footer>
     <script>
-        window.onscroll = function {stickyMenu()};
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+        window.onscroll = function() {myFunction()};
 
-        function stickyMenu(){
-            if (window.pageYOffset >= sticky{
-                navbar.classList.add("navStick")
-            }
-            else{
-                navbar.classList.remove("navStick");
+        let nav = document.getElementById("navBar");
+        let sticky = nav.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                nav.classList.add("sticky")
+            } else {
+                nav.classList.remove("sticky");
             }
         }
     </script>
