@@ -138,7 +138,7 @@
             </div>
 
             <div class = synopsisDiv>
-                <div><h2>The Girl in the Spider's Web MA15+</h2></div>
+                <h2>The Girl in the Spider's Web MA15+</h2>
                     <div class = synopsisCenterDiv>
                         <div class="plotDiv">
                             <h3>Plot Description</h3>
@@ -164,7 +164,7 @@
                     </div>
             </div>
             <div class = synopsisDiv>
-                <div><h2>A Star is Born MA15+</h2></div>
+                <h2>A Star is Born MA15+</h2>
                 <div class = synopsisCenterDiv>
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <div class = synopsisDiv>
-                <div><h2>Ralph Breaks the Internet G</h2></div>
+                <h2>Ralph Breaks the Internet G</h2>
                 <div class = synopsisCenterDiv>
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class = synopsisDiv>
-                <div><h2>Bo Erased MA15+</h2></div>
+                <h2>Boy Erased MA15+</h2>
                 <div class = synopsisCenterDiv>
                     <div class="plotDiv">
                         <h3>Plot Description</h3>
@@ -245,15 +245,20 @@
 
         <section id="bookings">
             <h2>Bookings</h2><br>
+            <div>
+                <h3>Movie Title - Day - Time</h3>
+
+            </div>
         </section>
     </main>
 
     <footer>
-      <div>&copy;<script>document.write(new Date().getFullYear());</script>
+      <div><p>&copy;<script>document.write(new Date().getFullYear());</script>
           Mark Brealey - s3738237 - RMIT University 2019 <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.<br>
           Lunardo Cinemas<br>
           (03) 9755 1234<br>
           inquiries@lunardocinemas.com.au
+          </p>
         </div>
         <div>
           Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.

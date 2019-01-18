@@ -7,7 +7,6 @@ h1{
     color:#000000;
     font-weight: 700;
     font-size: 40px;
-    font-family: Verdana;
 }
 
 h2{
@@ -15,11 +14,20 @@ h2{
     font-weight: 700;
 }
 
+h1, h2, h3{
+    font-family: Verdana;
+}
+
 main, nav, header{
     border: 1px solid black;
     max-width: 960px;
     margin: 0 auto;
     padding: 15px;
+}
+
+footer{
+    max-width:960px;
+    margin: 25px auto;
 }
 
 #nowShowingDiv{
@@ -40,20 +48,18 @@ main, nav, header{
 .synopsisDiv{
     border: 2px solid black;
     padding: 20px;
+    margin: 50px 10px;
 }
 
 .synopsisCenterDiv{
     display:inline-block;
     width:100%;
-    margin:0;
-    padding:0;
 }
 
 .plotDiv{
     width:40%;
     float:left;
     display:inline-block;
-    vertical-align: top;
 }
 
 .previewVideo{
@@ -62,6 +68,7 @@ main, nav, header{
 }
 
 .previewVideo iframe {
+    display:block;
     margin-right: auto;
     margin-left: auto;
 }
