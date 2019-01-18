@@ -257,7 +257,11 @@
         <section id="bookings">
             <h2>Bookings</h2><br>
             <form method="post" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php " onsubmit="return formValidate();">
-              <div class="bookingDiv">
+                <input type="hidden" name="movie[id]" value="ACT">
+                <input type="hidden" name="movie[day]" value="MON">
+                <input type="hidden" name="movie[hour]" value="21">
+
+                <div class="bookingDiv">
                   <div id="bookingsTitle">
                       <h3>Movie Title</h3>
                       <h3>Day - Time</h3>
@@ -370,7 +374,7 @@
                             <p>Credit Card: <input name="cust[card]" type=text rows="1" cols="80"></input></p>
                             <p>Expiry: <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
                             <p>
-                                <button id="submitButton">Submit</button>
+                                <button id="orderButton">ORDER</button>
                             </p>
                         </div>
                     </div>
