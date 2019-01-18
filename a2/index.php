@@ -23,8 +23,8 @@
         </div>
     </header>
 
-    <nav id="navbar">
-        <div class="navLinks">
+    <nav>
+        <div id = "navbar" class="navLinks">
             <a href="#aboutUs">ABOUT US</a> - <a href="#seatsAndPricing">SEATS & PRICING</a> - <a href="#nowShowing">NOW SHOWING</a> - <a href="#bookings">BOOKINGS</a>
         </div>
     </nav>
@@ -183,75 +183,6 @@
                         <button class="bookingButton">Sun - 6pm (18:00</button>
                     </div>
             </div>
-            <div class = synopsisDiv>
-                <h2>A Star is Born MA15+</h2>
-                <div class = synopsisCenterDiv>
-                    <div class="plotDiv">
-                        <h3>Plot Description</h3>
-                        <p>
-                            Seasoned musician Jackson Maine (Bradley Cooper) discovers-and falls in love with-struggling artist Ally (Gaga).<br>
-                            She has just about given up on her dream to make it big as a singer - until Jack coaxes her into the spotlight.<br>
-                            But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons.
-                        </p>
-                    </div>
-                    <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/nSbzyEJ8X9E" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
-                    </div>
-                </div>
-                <h2>Make a Booking</h2>
-                <div class="sessionsDiv">
-                    <button class="bookingButton">Mon - 6pm (18:00)</button>
-                    <button class="bookingButton">Tue - 6pm (18:00)</button>
-                    <button class="bookingButton">Sat - 3pm (15:00)</button>
-                    <button class="bookingButton">Sun - 3pm (15:00)</button>
-                </div>
-            </div>
-            <div class = synopsisDiv>
-                <h2>Ralph Breaks the Internet G</h2>
-                <div class = synopsisCenterDiv>
-                    <div class="plotDiv">
-                        <h3>Plot Description</h3>
-                        <p>
-                            Six years after the events of "Wreck-It Ralph," Ralph and Vanellope, now friends, discover a wi-fi router in their arcade, leading them into a new adventure.
-                        </p>
-                    </div>
-                    <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/T73h5bmD8Dc" frameborder="0" style=""></iframe>
-                    </div>
-                </div>
-                <h2>Make a Booking</h2>
-                <div class="sessionsDiv">
-                    <button class="bookingButton">Mon - 12pm (12:00)</button>
-                    <button class="bookingButton">Tue - 12pm (12:00)</button>
-                    <button class="bookingButton">Wed - 6pm (18:00)</button>
-                    <button class="bookingButton">Thu - 6pm (18:00)</button>
-                    <button class="bookingButton">Fri - 6pm (18:00)</button>
-                    <button class="bookingButton">Sat - 12pm (12:00)</button>
-                    <button class="bookingButton">Sun - 12pm (12:00)</button>
-                </div>
-            </div>
-            <div class = synopsisDiv>
-                <h2>Boy Erased MA15+</h2>
-                <div class = synopsisCenterDiv>
-                    <div class="plotDiv">
-                        <h3>Plot Description</h3>
-                        <p>
-                            The son of a Baptist preacher is forced to participate in a church-supported gay conversion program after being forcibly outed to his parents.
-                        </p>
-                    </div>
-                    <div class="previewVideo">
-                        <iframe src="https://www.youtube.com/embed/-B71eyB_Onw" frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>
-                    </div>
-                </div>
-                <h2>Make a Booking</h2>
-                <div class="sessionsDiv">
-                    <button class="bookingButton">Wed - 12pm (12:00)</button>
-                    <button class="bookingButton">Thu - 12pm (12:00)</button>
-                    <button class="bookingButton">Fri - 12pm (12:00)</button>
-                    <button class="bookingButton">Sat - 9pm (21:00)</button>
-                    <button class="bookingButton">Sun - 9pm (21:00)</button>
-                </div>
-            </div>
         </section>
 
         <section id="bookings">
@@ -387,19 +318,37 @@
             </form>
         </section>
     </main>
+    <script>
+        window.onscroll = function {stickyMenu()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
 
+        function stickyMenu(){
+            if (window.pageYOffset >= sticky{
+                navbar.classList.add("navStick")
+            }
+            else{
+                navbar.classList.remove("navStick");
+            }
+        }
+    </script>
     <footer>
-      <div><p>&copy;<script>document.write(new Date().getFullYear());</script>
-          Mark Brealey - s3738237 - RMIT University 2019 <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.<br>
+      <div class="footerContainer">
+          <div><p>
           Lunardo Cinemas<br>
           (03) 9755 1234<br>
           inquiries@lunardocinemas.com.au
           </p>
-        </div>
+          </div>
         <div>
-          Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.
+            <p>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</p>
+            <p>
+                &copy;<script>document.write(new Date().getFullYear());</script>
+            Mark Brealey - s3738237 - RMIT University 2019 <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.<br>
+                <a href="https://github.com/MarkBrealey/wp">Github Repository</a>
+            </p>
         </div>
-
+      </div>
       <div>
           <button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button>
       </div>
