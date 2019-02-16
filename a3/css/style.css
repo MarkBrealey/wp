@@ -27,7 +27,6 @@ h1, h2, h3, h4 {
 
 section {
     background-color: #91B7C7;
-    background-image: url(../../media/header.png);
     min-height: 100vh;
     max-width: 960px;
     border: 2px solid black;

@@ -1,3 +1,4 @@
+<?php include 'tools.php'?>
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -8,7 +9,6 @@
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
-    <link id='tools' type="php" rel="php"
     <script src='../wireframe.js'></script>
 </head>
 
@@ -125,51 +125,7 @@
     <section id="nowShowing">
         <h2>Now Showing</h2><br>
         <div id="nowShowingDiv">
-            <div class="moviePosterDiv">
-                <img width=80% src="../../media/spider.jpg">
-                <p>
-                <h3>The Girl in the Spider's Web</h3></p>
-                <p>Wed - 9pm (21:00)</p>
-                <p>Thu - 9pm (21:00)</p>
-                <p>Fri - 9pm (21:00)</p>
-                <p>Sat - 6pm (18:00)</p>
-                <p>Sun - 6pm (18:00)</p>
-                <p><button id="movie1">More Information</button></p>
-            </div>
-            <div class="moviePosterDiv">
-                <img width=80% src="../../media/starborn.jpg">
-                <p>
-                <h3>A Star is Born</h3></p>
-                <p>Mon - 6pm (18:00)</p>
-                <p>Tue - 6pm (18:00)</p>
-                <p>Sat - 3pm (15:00)</p>
-                <p>Sun - 3pm (15:00)</p>
-                <p><button id="movie2">More Information</button></p>
-            </div>
-            <div class="moviePosterDiv">
-                <img width=80% src="../../media/wreckitralph.jpg">
-                <p>
-                <h3>Ralph Breaks the Internet</h3></p>
-                <p>Mon - 12pm (12:00)</p>
-                <p>Tue - 12pm (12:00)</p>
-                <p>Wed - 6pm (18:00)</p>
-                <p>Thu - 6pm (18:00)</p>
-                <p>Fri - 6pm (18:00)</p>
-                <p>Sat - 12pm (12:00)</p>
-                <p>Sun - 12pm (12:00)</p>
-                <p><button id="movie3">More Information</button></p>
-            </div>
-            <div class="moviePosterDiv">
-                <img width=80% src="../../media/boyerased.jpg">
-                <p>
-                <h3>Boy Erased</h3></p>
-                <p>Wed - 12pm (12:00)</p>
-                <p>Thu - 12pm (12:00)</p>
-                <p>Fri - 12pm (12:00)</p>
-                <p>Sat - 9pm (21:00)</p>
-                <p>Sun - 9pm (21:00)</p>
-                <p><button id="movie4">More Information</button></p>
-            </div>
+            <?php showMovies($moviesObject); ?>
         </div>
 
         <div class=synopsisDiv>
@@ -188,95 +144,27 @@
                 <div id = "movieTimes" class="sessionsDiv">
                 </div>
         </div>
-        <script>
-            //First movie panel clicked
-            document.getElementById("movie1").onclick = function (){
-                document.getElementById("movieTitle").innerHTML="The Girl in the Spider's Web (MA15+)";
-                document.getElementById("plotDescription").innerHTML="Claire Foy is the #GirlintheSpidersWeb.\n" +
-                    "Watch the trailer for the next chapter of the Dragon Tattoo series now.\n In theaters November 9th.";
-                document.getElementById("movieTrailer").innerHTML="<iframe src=\"https://www.youtube.com/embed/XKMSP9OKspQ\""
-                    +"frameborder=\"0\" style=\"position: relative; height: 100%; width: 100%;\"></iframe>"
-                document.getElementById("movieTimes").innerHTML="" +
-                    "<button class=\"bookingButton\">Wed - 9pm (21:00)</button>\n" +
-                    "<button class=\"bookingButton\">Thu - 9pm (21:00)</button>\n" +
-                    "<button class=\"bookingButton\">Fri - 9pm (21:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sat - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sun - 6pm (18:00)</button>";
-            }
-
-            //Second movie panel clicked
-            document.getElementById("movie2").onclick = function (){
-                document.getElementById("movieTitle").innerHTML="A Star is Born";
-                document.getElementById("plotDescription").innerHTML="Seasoned musician Jackson Maine (Bradley Cooper)"+
-                    " discovers-and falls in love with-struggling artist Ally (Gaga). She has just about given up on" +
-                    "her dream to make it big as a singer - until Jack coaxes her into the spotlight. "+
-                    "But even as Ally's career takes off, the personal side of their relationship is breaking down, "+
-                    "as Jack fights an ongoing battle with his own internal demons.";
-                document.getElementById("movieTrailer").innerHTML="<iframe src=\"https://www.youtube.com/embed/nSbzyEJ8X9E\""
-                    +"frameborder=\"0\" style=\"position: relative; height: 100%; width: 100%;\"></iframe>"
-                document.getElementById("movieTimes").innerHTML="" +
-                    "<button class=\"bookingButton\">Mon - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Tue - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sat - 3pm (15:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sun - 3pm (15:00)</button>";
-            }
-
-            //Third movie panel clicked
-            document.getElementById("movie3").onclick = function (){
-                document.getElementById("movieTitle").innerHTML="Ralph Breaks the Internet";
-                document.getElementById("plotDescription").innerHTML="Taking place six years after saving the arcade "+
-                    "from Turbo's vengeance, the Sugar Rush arcade cabinet has broken, forcing Ralph and Vanellope to "+
-                    "travel to the Internet via the newly-installed Wi-Fi router in Litwak's Arcade to retrieve "+
-                    "the piece capable of saving the game.";
-                document.getElementById("movieTrailer").innerHTML="<iframe src=\"https://www.youtube.com/embed/-B71eyB_Onw\""
-                    +"frameborder=\"0\" style=\"position: relative; height: 100%; width: 100%;\"></iframe>"
-                document.getElementById("movieTimes").innerHTML="" +
-                    "<button class=\"bookingButton\">Mon - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Tue - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Wed - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Thu - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Fri - 6pm (18:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sat - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sun - 12pm (12:00)</button>";
-            }
-
-            //Fourth movie panel clicked
-            document.getElementById("movie4").onclick = function (){
-                document.getElementById("movieTitle").innerHTML="Boy Erased";
-                document.getElementById("plotDescription").innerHTML="The son of a Baptist preacher is forced to "+
-                    "participate in a church-supported gay conversion program after being forcibly outed to his parents.";
-                document.getElementById("movieTrailer").innerHTML="<iframe src=\"https://www.youtube.com/embed/XKMSP9OKspQ\""
-                    +"frameborder=\"0\" style=\"position: relative; height: 100%; width: 100%;\"></iframe>"
-                document.getElementById("movieTimes").innerHTML="" +
-                    "<button class=\"bookingButton\">Wed - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Thu - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Fri - 12pm (12:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sat - 9pm (21:00)</button>\n" +
-                    "<button class=\"bookingButton\">Sun - 9pm (21:00)</button>";
-            }
-        </script>
     </section>
 
     <section id="bookings">
         <div id="bookingsDiv">
         <h2>Bookings</h2><br>
-        <form method="post" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php "
+        <form method="post" target="_blank" action="index.php"
               onsubmit="return formValidate();">
-            <input type="hidden" name="movie[id]" value="ACT">
-            <input type="hidden" name="movie[day]" value="MON">
-            <input type="hidden" name="movie[hour]" value="21">
+
+            <input type="hidden" name="movie[id]" id= "movie_id" value="ACT">
+            <input type="hidden" name="movie[day]" id="movie_day" value="MON">
+            <input type="hidden" name="movie[hour]" id="movie_hour" value="21">
 
             <div class="bookingDiv">
                 <div id="bookingsTitle">
-                    <h3>Movie Title</h3>
-                    <h3>Day - Time</h3>
                 </div>
                 <div class=bookingCenterDiv>
                     <div class="ticketsDiv">
                         <div class="ticketsSubDiv">
                             <h4>Standard Tickets</h4>
                             <p>Adults:
-                                <select name=seats[STA]>
+                                <select onchange='updatePricing()'  id=seats[STA] name=seats[STA]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -291,7 +179,7 @@
                                 </select>
                             </p>
                             <p>Concession:
-                                <select name=seats[STP]>
+                                <select onchange='updatePricing()'  id=seats[STP] name=seats[STP]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -306,7 +194,7 @@
                                 </select>
                             </p>
                             <p>Children:
-                                <select name=seats[STC]>
+                                <select onchange='updatePricing()'  id=seats[STC] name=seats[STC]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -324,7 +212,7 @@
                         <div class="ticketsSubDiv">
                             <h4>First Class Tickets</h4>
                             <p>Adults:
-                                <select name=seats[FCA]>
+                                <select onchange='updatePricing()'  id="seats[FCA]" name=seats[FCA]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -339,7 +227,7 @@
                                 </select>
                             </p>
                             <p>Concession:
-                                <select name=seats[FCP]>
+                                <select onchange='updatePricing()' id="seats[FCP]" name=seats[FCP]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -354,7 +242,7 @@
                                 </select>
                             </p>
                             <p>Children:
-                                <select cols="50" name=seats[FCC]>
+                                <select onchange='updatePricing()' cols="50" id=seats[FCC] name=seats[FCC]>
                                     <option value="">Please Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -371,7 +259,7 @@
                         </div>
                         <div class="ticketsSubDiv">
                             <p>
-                                Total: <input name="total" type=text rows="1" cols="50"></input>
+                                Total: <input id="pricingTotal" name="total" value="0.00" type=text rows="1" cols="50"></input>
                             </p>
                         </div>
                     </div>
@@ -430,18 +318,14 @@
             if (last <= 0){
                 for (x=0; x<navlinks.length;x++){
                     navlinks[x].classList.remove("activeLink");
-                    //console.log("removed activeLink from element " + x);
                 }
                 navlinks[i].classList.add("activeLink")
-                //console.log("Last should be active");
             }else{
                 if (prev <=0 && next > 0){
                     for (y=0; y<navlinks.length;y++){
                         navlinks[y].classList.remove("activeLink");
-                        //console.log("removed activeLink from element " + y);
                     }
                     navlinks[i-1].classList.add("activeLink")
-                    //console.log(i + "Should be active");
                 }
             }
         }
@@ -457,6 +341,82 @@
             nav.classList.remove("sticky");
         }
     }
+
+    function updateSynopsis(movieID, movieTitle, moviePlotDescription, movieTrailerURL, moviePosterLink, movieRating, movieScreenings) {
+        document.getElementById("movieTitle").innerHTML=movieTitle;
+        document.getElementById("plotDescription").innerHTML=moviePlotDescription;
+        document.getElementById("movieTrailer").innerHTML="<iframe src=" + movieTrailerURL + ' frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>"';
+        document.getElementById("movieTimes").innerHTML="";
+        for (i=0; i<movieScreenings.length; i++)
+        {
+            document.getElementById("movieTimes").innerHTML += "<button class='bookingButton' onclick=updateBookingFields('" + movieID + "','" + movieTitle + "','" + movieScreenings[i]['day'] + "','" + movieScreenings[i]['hour'] + "')>" + movieScreenings[i]['day']  + " - " +
+                "" + movieScreenings[i]['hour'] + ":00</button>";}
+
+    }
+
+    function updateBookingFields(movieID, movieTitle, movieDay, movieHour){
+        document.getElementById("movie_id").value = movieID;
+        document.getElementById("movie_day").value = movieDay;
+        document.getElementById("movie_hour").value = movieHour;
+
+        document.getElementById("bookingsTitle").innerHTML = "<h3>" + movieTitle + "</h3><h3>" + movieDay + " - " + movieHour + ":00</h3>";
+    }
+
+    function updatePricing(){
+        //Setting the total value to zero before calculation
+        document.getElementById("pricingTotal").value = 0;
+
+        //getting the Day and Time
+        var day = document.getElementById("movie_day").value;
+        var hour = document.getElementById("movie_hour").value;
+
+        //Getting all seat select fields
+        var seats = [document.getElementById('seats[STA]'),document.getElementById('seats[STP]'), document.getElementById('seats[STC]'), document.getElementById('seats[FCA]'), document.getElementById('seats[FCP]'), document.getElementById('seats[FCC]')];
+
+        //Getting seat prices
+        var pricing = <?php echo json_encode($seatPrices) ?>
+
+        for (i=0;i<seats.length;i++){
+            var a = seats[i];
+            var seatQty = a.options[a.selectedIndex].value;
+
+            var seatCode = seats[i].attributes['name'].value.substr(6).slice(0,-1);
+
+            if (isDiscounted(day,hour)){
+                var seatPrice = pricing['Discount'][seatCode];
+            }else{
+                var seatPrice = pricing['Full'][seatCode];
+            }
+
+            document.getElementById("pricingTotal").value = parseFloat(document.getElementById("pricingTotal").value) + parseFloat(seatQty * seatPrice);
+
+        }
+    }
+
+    function isDiscounted(day, time){
+        if (day=="MON" || day == "WED" || time == "12"){
+            if (day != "SUN" && day!= "SAT"){
+                discount = true;
+                return discount;
+            }else{
+                discount = false;
+                return discount;
+            }
+        }else{
+            discount = false;
+            return discount;
+        }
+    }
+
 </script>
+
+<!--Debug Module--!>
+<?php
+preShow($_POST);
+preShow($_GET);
+preShow($_SESSION);
+printMyCode();
+?>
+
 </body>
 </html>
