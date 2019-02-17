@@ -128,7 +128,7 @@
             <?php showMovies($moviesObject); ?>
         </div>
 
-        <div class=synopsisDiv>
+        <div id = "synopsisDiv" class=synopsisDiv style="visibility: hidden">
                 <h2 id="movieTitle">Blank Heading</h2>
                 <div class=synopsisCenterDiv>
                     <div class="plotDiv">
@@ -147,19 +147,21 @@
     </section>
 
     <section id="bookings">
-        <div id="bookingsDiv">
+        <div id="bookingsDiv" style="visibility: visible">
         <h2>Bookings</h2><br>
-        <form method="post" target="_blank" action="index.php"
-              onsubmit="return formValidate();">
 
-            <input type="hidden" name="movie[id]" id= "movie_id" value="ACT">
-            <input type="hidden" name="movie[day]" id="movie_day" value="MON">
-            <input type="hidden" name="movie[hour]" id="movie_hour" value="21">
+        <form method="post" target="_self" action="index.php"
+              onsubmit="return formValidate();">
+            <?php if(!empty($_POST)){resetValues();}?>
+            <input type="hidden" name="movie[id]" id= "movie_id" value="">
+            <input type="hidden" name="movie[day]" id="movie_day" value="">
+            <input type="hidden" name="movie[hour]" id="movie_hour" value="">
+            <input type="hidden" name="movie[title]" id="movie_title" value="">
 
             <div class="bookingDiv">
                 <div id="bookingsTitle">
                 </div>
-                <div class=bookingCenterDiv>
+                <div id="bookingCentreDiv" class=bookingCenterDiv style="visibility: hidden">
                     <div class="ticketsDiv">
                         <div class="ticketsSubDiv">
                             <h4>Standard Tickets</h4>
@@ -177,6 +179,7 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['STA']) ?  "<p class='error'>" . $errors['seats']['STA'] . "</p>" : ""; ?>
                             </p>
                             <p>Concession:
                                 <select onchange='updatePricing()'  id=seats[STP] name=seats[STP]>
@@ -192,6 +195,7 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['STP']) ?  "<p class='error'>" . $errors['seats']['STP'] . "</p>" : ""; ?>
                             </p>
                             <p>Children:
                                 <select onchange='updatePricing()'  id=seats[STC] name=seats[STC]>
@@ -207,6 +211,7 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['STC']) ?  "<p class='error'>" . $errors['seats']['STC'] . "</p>" : ""; ?>
                             </p>
                         </div>
                         <div class="ticketsSubDiv">
@@ -225,6 +230,7 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['FCA']) ?  "<p class='error'>" . $errors['seats']['FCA'] . "</p>" : ""; ?>
                             </p>
                             <p>Concession:
                                 <select onchange='updatePricing()' id="seats[FCP]" name=seats[FCP]>
@@ -240,6 +246,7 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['FCP']) ?  "<p class='error'>" . $errors['seats']['FCP'] . "</p>" : ""; ?>
                             </p>
                             <p>Children:
                                 <select onchange='updatePricing()' cols="50" id=seats[FCC] name=seats[FCC]>
@@ -255,21 +262,31 @@
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
+                                <?php echo isset($errors['seats']['FCC']) ?  "<p class='error'>" . $errors['seats']['FCC'] . "</p>" : ""; ?>
                             </p>
                         </div>
                         <div class="ticketsSubDiv">
                             <p>
-                                Total: <input id="pricingTotal" name="total" value="0.00" type=text rows="1" cols="50"></input>
+                                Total: <input id="pricingTotal" name="total" value="0.00" type=text rows="1" cols="50"></input><br>
+                                <?php echo isset($errors['seats']['TotalSeats']) ? "<span class='error'>" . $errors['seats']['TotalSeats'] . "</span>": ""; ?>
                             </p>
                         </div>
                     </div>
                     <div class="custDetailsDiv">
                         <h4>Your Details</h4>
-                        <p>Name: <input name="cust[name]" type=text rows="1" cols="80"></input></p>
-                        <p>e-Mail: <input name="cust[email]" type=email rows="1" cols="80"></input></p>
-                        <p>Mobile: <input name="cust[mobile]" type=tel rows="1" cols="80"></input></p>
-                        <p>Credit Card: <input name="cust[card]" type=text rows="1" cols="80"></input></p>
-                        <p>Expiry: <input name="cust[expiry]" type=month rows="1" cols="80"></input></p>
+                        <p>Name: <input id="cust[name]" name="cust[name]" pattern = "[A-Za-Z]" placeholder="Firstname Lastname" type=text rows="1" cols="80"></input></p>
+                        <?php echo isset($errors['cust']['name']) ?  "<p class='error'>" . $errors['cust']['name'] . "</p>" : ""; ?>
+                        <p>e-Mail: <input id="cust[email]" name="cust[email]" type=email placeholder="example@email.com" rows="1" cols="80"></input></p>
+                        <?php echo isset($errors['cust']['email']) ?  "<p class='error'>" . $errors['cust']['email'] . "</p>" : ""; ?>
+                        <p>Mobile: <input id="cust[mobile]" name="cust[mobile]" pattern="^0?[4-5](\s*[0-9]\s*){8}$" placeholder="04XX XXX XXX" type=tel rows="1" cols="80"></input></p>
+                        <?php echo isset($errors['cust']['mobile']) ?  "<p class='error'>" . $errors['cust']['mobile'] . "</p>" : ""; ?>
+                        <p>Credit Card: <input id="cust[card]" name="cust[card]" placeholder="XXXX XXXX XXXX XXXX" pattern="\d{4}-?\d{4}-?\d{4}-?\d{4}" type=text rows="1" cols="80"></input></p>
+                        <?php echo isset($errors['cust']['card']) ?  "<p class='error'>" . $errors['cust']['card'] . "</p>" : ""; ?>
+                        <p>Expiry: <input id="cust[expiry]" name="cust[expiry]" type=month min=validateExpiry() rows="1" cols="80"></input></p>
+                        <?php echo isset($errors['cust']['expiry']) ?  "<p class='error'>" . $errors['cust']['expiry'] . "</p>" : ""; ?>
+
+                        <p><input type="checkbox" onchange=groupTicket() name = "cust[groupticket]" id="ind_ticket"> Print group ticket?</p>
+                        <input type="hidden" name="cust[groupticket]" id="group_ticket" value="">
                         <p>
                             <button class="bookingButton" id="orderButton">ORDER</button>
                         </p>
@@ -334,6 +351,7 @@
     let nav = document.getElementById("navBar");
     let sticky = nav.offsetTop;
 
+
     function stickyNav() {
         if (window.pageYOffset >= sticky) {
             nav.classList.add("sticky")
@@ -342,7 +360,15 @@
         }
     }
 
+    function groupTicket(){
+        var x = document.getElementById("ind_ticket").checked;
+        document.getElementById("group_ticket").value = x;
+    }
+
     function updateSynopsis(movieID, movieTitle, moviePlotDescription, movieTrailerURL, moviePosterLink, movieRating, movieScreenings) {
+        //Setting the Synopsis Box to visible
+        document.getElementById("synopsisDiv").style.visibility="visible";
+        //
         document.getElementById("movieTitle").innerHTML=movieTitle;
         document.getElementById("plotDescription").innerHTML=moviePlotDescription;
         document.getElementById("movieTrailer").innerHTML="<iframe src=" + movieTrailerURL + ' frameborder="0" style="position: relative; height: 100%; width: 100%;"></iframe>"';
@@ -355,11 +381,26 @@
     }
 
     function updateBookingFields(movieID, movieTitle, movieDay, movieHour){
+        //Setting the Synopsis Box to visible
+        document.getElementById("bookingCentreDiv").style.visibility="visible";
         document.getElementById("movie_id").value = movieID;
         document.getElementById("movie_day").value = movieDay;
         document.getElementById("movie_hour").value = movieHour;
+        document.getElementById("movie_title").value = movieTitle;
 
         document.getElementById("bookingsTitle").innerHTML = "<h3>" + movieTitle + "</h3><h3>" + movieDay + " - " + movieHour + ":00</h3>";
+    }
+
+    function validateExpiry(){
+        var dateToday = new Date();
+
+        var minMonth = dateToday.getMonth() +1;
+        var minYear = dateToday.getFullYear();
+
+        var minDate = minYear + '-' + minMonth;
+        console.log(minDate);
+
+        return minDate;
     }
 
     function updatePricing(){
@@ -412,9 +453,13 @@
 
 <!--Debug Module--!>
 <?php
+echo "<p>Contents of POST:</p>";
 preShow($_POST);
+echo "<p>Contents of GET:</p>";-
 preShow($_GET);
+echo "<p>Contents of SESSION:</p>";
 preShow($_SESSION);
+echo "<p>PAGE CODE:</p>";
 printMyCode();
 ?>
 

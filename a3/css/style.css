@@ -238,6 +238,12 @@ a:active {
     display: flex;
 }
 
+.error{
+    font-size: 10px;
+    color: red;
+    padding: 2px;
+}
+
 .ticketsDiv {
     flex: 1;
 }
@@ -265,6 +271,12 @@ a:active {
     height: 40px;
     border-radius: 8px;
     margin: 2px;
+}
+
+.ticket2{
+    border: 2px solid black;
+    border: 2px;
+    padding-top: 50px;
 }
 
 

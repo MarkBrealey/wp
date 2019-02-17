@@ -83,9 +83,149 @@
         ]
     ];
 
-    $seatPricesJSON = json_encode($seatPrices);
+    $seatTypes = [
+    'STA'=> 'Standard Adult',
+    'STP' => 'Standard Concession',
+    'STC' => 'Standard Child',
+    'FCA' => 'First Class Adult',
+    'FCP' => 'First Class Concession',
+    'FCC' => 'First Class Child'];
+
+//Validation and Sanitising
+
+if (!empty($_POST)){
+    $errors = array();
+
+    ////Sanitising Data
+    $_POST["cust"]["name"] = filter_var($_POST["cust"]["name"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $_POST["cust"]["email"] = filter_var($_POST["cust"]["email"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $_POST["cust"]["mobile"] = filter_var($_POST["cust"]["mobile"], FILTER_SANITIZE_NUMBER_INT);
+    $_POST["cust"]["card"] = filter_var($_POST["cust"]["card"], FILTER_SANITIZE_NUMBER_INT);
+    $_POST["cust"]["expiry"] = filter_var($_POST["cust"]["expiry"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $_POST["cust"]["groupticket"] = filter_var($_POST["cust"]["groupticket"], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+    $_POST['movie']['id'] = filter_var($_POST['movie']['id'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $_POST['movie']['day'] = filter_var($_POST['movie']['day'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+    $_POST['movie']['hour'] = filter_var($_POST['movie']['hour'], FILTER_SANITIZE_NUMBER_INT);
+    $_POST['movie']['title'] = filter_var($_POST['movie']['title'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+    foreach ($seatTypes as $seatTypeCode => $seatTypeName) {
+        $_POST['seats'][$seatTypeCode] = filter_var($_POST['seats'][$seatTypeCode], FILTER_SANITIZE_NUMBER_INT);
+    }
+
+    //Checking customer details
+    if (empty($_POST["cust"]["name"]) || !preg_match('/^[A-Z]\'?[- a-zA-Z]+$/', $_POST["cust"]["name"])){
+        echo "";
+        $errors["cust"]["name"] = "Please enter a name or a proper name";
+    }
+    if (empty($_POST["cust"]["email"]) || !preg_match('/[a-zA-Z0-9]+@[a-zA-Z0-9]+(.[a-zA-Z0-9]+)+/', $_POST["cust"]["email"]) ){
+        $errors["cust"]["email"] = "Please enter a valid email address";
+    }
+    if (empty($_POST["cust"]["mobile"]) || !preg_match('/^0?[4-5](\s*[0-9]\s*){8}$/', $_POST["cust"]["mobile"]) ){
+        $errors["cust"]["mobile"] = "Please enter an Australian mobile number";
+    }
+    if (empty($_POST["cust"]["card"]) || !preg_match('/\d{4}-?\d{4}-?\d{4}-?\d{4}/', $_POST["cust"]["card"]) ){
+        $errors["cust"]["card"] = "Please enter a valid Credit Card Number";
+    }
+
+    //Checking and validating expiry
+
+    if (!empty($_POST['cust']['expiry'])) {
+        $cardExp = $_POST['cust']['expiry'];
+        $cardExp = explode('-', $cardExp);
+        $year = $cardExp[0];
+        $month = $cardExp[1];
+
+        if (!($year < date("Y"))) { //YEAR IS NOT LESS THAN CURRENT YEAR
+            if ($month <= date('m')){ //MONTH IS EQUAL TO OR LESS THAN CURRENT MONTH
+                $errors["cust"]["expiry"] = "Please enter valid Expiry Year";;
+            }
+        } else {
+            $errors["cust"]["expiry"] = "Please enter valid Expiry Year";;
+        }
+    }
+
+    if (empty($_POST["cust"]["expiry"])){
+        $errors["cust"]["expiry"] = "Please enter an Expiry Date";
+    }
+
+    // Checking Seat inputs
+    if ($_POST['seats']['STA'] > 0 || $_POST['seats']['STP'] > 0 || $_POST['seats']['STC'] > 0 ||
+            $_POST['seats']['FCA'] > 0 || $_POST['seats']['FCP'] > 0 || $_POST['seats']['FCC'] > 0){
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["STA"])) {
+            $errors["seats"]["STA"] = "Please select a valid input for Standard Seating.";
+        }
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["STP"])) {
+            $errors["seats"]["STP"] = "Please select a valid input for Standard Concession.";
+        }
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["STC"])) {
+            $errors["seats"]["STC"] = "Please select a valid input for Standard Children.";
+        }
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["FCA"])) {
+            $errors["seats"]["FCA"] = "Please select a valid input for First Class Seating.";
+        }
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["FCP"])) {
+            $errors["seats"]["FCP"] = "Please select a valid input for First Class Concession.";
+        }
+        if (!preg_match('/[0-9]{0,2}/', $_POST["seats"]["FCC"])) {
+            $errors["seats"]["FCC"] = "Please select a valid input for First Class Children.";
+        }
+    }else{
+        $errors["seats"]["TotalSeats"] = "Please select at least one seat.";
+    }
+
+    //Setting fields to previous values.
+
+    //Submitting Data to SESSION
+    if (count($errors)== 0){
+        //Set information from POST to SESSION
+        $_SESSION['cart'][] = $_POST;
+        //WRITE TO FILE
+        /**
+        $fp = fopen('bookings.csv', 'w');
+        foreach ($_SESSION['cart'] as $order) {
+            foreach ($order['seats'] as $seatTypeCode => $count) {
+                if ($count) {
+                    echo $seatTypes[$seatTypeCode] . ' x ' . $count;
+                    $booking = [$_SESSION['cart'][$key]['cust']['name'], $_SESSION['cart'][$key]['cust']['email'],
+                        $_SESSION['cart'][$key]['cust']['mobile'], $seatTypes[$seatTypeCode], $count,
+                        $_SESSION['cart'][$key]['movie']['id'], $_SESSION['cart'][$key]['movie']['day'],
+                        $_SESSION['cart'][$key]['movie']['hour']];
+                    fputcsv($fp, $booking);
+
+                }
+            }
+        }
+        fclose($fp);
+         **/
+        header("Location: receipt.php");
+    }
+}
 
 //PHP Functions
+
+function resetValues(){
+    //Resetting Booking field movie data
+    echo "document.getElementById('bookingCentreDiv').style.visibility='visible'";
+    echo "document.getElementById('movie_id').value = " . $_POST['movie']['id'] . ";";
+    echo "document.getElementById('movie_day').value = " . $_POST['movie']['day'] . ";";
+    echo "document.getElementById('movie_hour').value = " . $_POST['movie']['hour'] . ";";
+    echo "document.getElementById('movie_title').value = " . $_POST['movie']['title'] . ";";
+    echo "document.getElementById('bookingsTitle').innerHTML = '<h3>'" . $_POST['movie']['title'] . "'</h3><h3>'" . $_POST['movie']['day'] . " - " . $_POST['movie']['hour'] . ":00</h3>";
+    //Resetting ticket Fields
+    echo "document.getElementById('seats[STA]').value = " . $_POST['seats']['STA'] . ";";
+    echo "document.getElementById('seats[STP]').value = " . $_POST['seats']['STP'] . ";";
+    echo "document.getElementById('seats[STC]').value = " . $_POST['seats']['STC'] . ";";
+    echo "document.getElementById('seats[FCA]').value = " . $_POST['seats']['FCA'] . ";";
+    echo "document.getElementById('seats[FCP]').value = " . $_POST['seats']['FCP'] . ";";
+    echo "document.getElementById('seats[FCC]').value = " . $_POST['seats']['FCC'] . ";";
+    //Resetting Customer Details
+    echo "document.getElementById('cust[name]').value = " . $_POST['cust']['name'] . ";";
+    echo "document.getElementById('cust[email]').value = " . $_POST['cust']['email'] . ";";
+    echo "document.getElementById('cust[mobile]]').value = " . $_POST['cust']['mobile'] . ";";
+    echo "document.getElementById('cust[card]').value = " . $_POST['cust']['card'] . ";";
+    echo "document.getElementById('cust[expiry]').value = " . $_POST['cust']['expiry'] . ";";
+}
 
     function showMovies($moviesObject)
     {
@@ -117,23 +257,6 @@
         {
             echo '<button class="bookingButton" onclick="updateBooking(' . $movID . ', ' . $screening['day'] . ', ' . $screening['hour'] .');">' . $screening['day'] . " - " . $screening['hour'] . ":00".'</button>';
         };
-    }
-
-    function updateBookingSheet($movID, $movDay, $movHour){
-        echo "document.getElementById('movie_id').value=" . $movID . ";";
-        echo "document.getElementById('movie_day').value=" . $movDay . ";";
-        echo "document.getElementById('movie_hour').value=" . $movHour . ";";
-
-        echo "document.getElementById('bookingsTitle').innerHTML = '<h3>' . $movID . '</h3><h3>' . $movDay . ' - ' . $movHour . ':00</h3>'";
-    }
-
-    function getSeatArray(){
-        echo "var seats[0] = document.getElementByID('seats[STA]');" . "\r\n";
-        echo "var seats[1] = document.getElementByID('seats[STP]');" . "\r\n";
-        echo "var seats[2] = document.getElementByID('seats[STC]');" . "\r\n";
-        echo "var seats[3] = document.getElementByID('seats[FCA]');" . "\r\n";
-        echo "var seats[4] = document.getElementByID('seats[FCP]');" . "\r\n";
-        echo "var seats[5] = document.getElementByID('seats[FCC]');" . "\r\n";
     }
 
 //Supplied Functions
